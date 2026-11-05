@@ -23,7 +23,7 @@ async def get_movie(message: types.Message):
         await bot.copy_message(
             chat_id=message.chat.id,
             from_chat_id=CHANNEL_ID,
-            message_id=int(message.text),
+            message_id=int(message.text),protect_content=True,
         )
     except Exception:
         await message.answer("Bunday kino topilmadi.")
